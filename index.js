@@ -44,7 +44,14 @@ app.get("/patients/:id", (request, response) => {
 
   const { email, phoneNumber, firstName, lastName } = patient;
 
+  const color = patient.gender === "m" ? "blue" : "pink";
+
   const html = `<html>
+    <style>
+        h5 {
+            color: ${color};
+        }
+    </style>
     <h5> ${firstName} ${lastName}</h5>
     <p>Phone: ${phoneNumber} </p>
     <p>Email: ${email} </p>

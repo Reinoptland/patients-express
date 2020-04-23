@@ -17,3 +17,7 @@ app.listen(
   port, // TCP port where the server listens
   onListen // callback runs when server starts
 );
+
+app.get("/patients", (request, response) => {
+  response.send("hello");
+});
